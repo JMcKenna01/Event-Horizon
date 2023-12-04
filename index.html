@@ -19,21 +19,22 @@
                 </a>
             </div>
             <div class="navbar-end">
-                <a id="fav" class="is-size-4 pr-4 navbar-item has-text-grey-lighter"
-                    href="./assets/favorites.html"><span class="is-size-1 mb-2">&#9733;</span>Favorites</a>
+                <a id="fav" class="is-size-4 pr-4 navbar-item has-text-grey-lighter" href="./assets/favorites.html">
+                    <span class="is-size-1 mb-2">&#9733;</span>Favorites
+                </a>
             </div>
         </nav>
     </header>
     <main>
-
         <section class="section">
             <div class="container has-text-centered">
                 <div class="column has-background-grey-light">
                     <div id="center">
                         <h2 class="is-size-4">Would you like to browse for music or movies?</h2>
                         <div>
-                            <button class="is-size-4 mx-5 mt-5">Music</button>
-                            <button class="is-size-4 mx-5 mt-5">Movies</button>
+                            <!-- Updated button IDs -->
+                            <button id="musicButton" class="button is-size-4 mx-5 mt-5">Music</button>
+                            <button id="moviesButton" class="button is-size-4 mx-5 mt-5">Movies</button>
                         </div>
                         <form>
                             <input id="input" class="input is-rounded mt-5 has-text-centered" type="text"
@@ -44,17 +45,20 @@
                 </div>
             </div>
         </section>
+        <!-- Content will be loaded here -->
         <section id="results" class="section is-hidden">
             <div>
                 
             </div>
+      
+            
         </section>
         <script src="./assets/script.js"></script>
-
     </main>
     <footer>
-
+        <!-- Footer content -->
     </footer>
+    
 </body>
 
 </html>
