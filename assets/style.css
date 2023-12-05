@@ -25,3 +25,41 @@ span {
     color: yellow;
 }
 
+html {
+    height: 100%;
+    background-image: url("imgs/DALL·E\ 2023-12-04\ 19.31.05\ -\ Create\ an\ authentic\ background\ image\ for\ \'Event\ Horizon\'\,\ a\ comprehensive\ entertainment\ platform\ that\ encompasses\ both\ movies\ and\ music.\ The\ image\ sho.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    height: 100%;
+}
+
+#musicButton {
+    background-color: rgb(119, 200, 217);
+}
+
+#moviesButton {
+    background-color: lightcoral;
+}
+
+#submit {
+    background-color: rgb(113, 230, 191);
+}
+
+#top {
+    opacity: .9;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#bottom {
+    margin-top: 15%;
+}
+
+#bottomtext {
+    opacity: .9;
+    width: 50%;
+    margin-left: 25%;
+}
