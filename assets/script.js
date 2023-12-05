@@ -1,5 +1,4 @@
-
-      // Function to handle Music button click
+// Function to handle Music button click
 document.getElementById('musicButton').addEventListener('click', function () {
     console.log("Music button clicked");
     currentSearchType = 'music';
@@ -9,6 +8,7 @@ document.getElementById('musicButton').addEventListener('click', function () {
 document.getElementById('moviesButton').addEventListener('click', function () {
     console.log("Movies button clicked");
     currentSearchType = 'movies';
+    searchMoviesWithDatabase();
 });
 // Function to display a prompt for music search
 function displayMusicSearchPrompt() {
@@ -33,8 +33,7 @@ function searchContent(term) {
     console.log("Searching content for term:", term);
     if (currentSearchType === 'music') {
         searchMusicWithShazam(term);
-    } else {
-    }
+    } else {}
 }
 // Function to search music using Shazam API
 function searchMusicWithShazam(query) {
@@ -79,11 +78,32 @@ function displayMusicResults(dataObj) {
         var addToFavoritesBtn = document.createElement('button');
         addToFavoritesBtn.style.float = "right";
         addToFavoritesBtn.textContent = 'Add to Favorites';
-        addToFavoritesBtn.onclick = function() { addToFavorites(hit.track); };
+        addToFavoritesBtn.onclick = function () {
+            addToFavorites(hit.track);
+        };
         resultBody.appendChild(addToFavoritesBtn);
         resultsContainer.appendChild(resultCard);
     });
     resultsContainer.classList.remove('is-hidden');
+}
+
+function searchMoviesWithDatabase(query) {
+    const url = 'https://moviesdatabase.p.rapidapi.com/titles';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '8a0635ae58msheed7a8d473ea8c6p148b2fjsnbf0939c709d1',
+            'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+        }
+    };
+
+    fetch(url, options)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Received data from MoviesDatabase:", data);
+        })
+        .catch(error => console.error('Error:', error));
+
 }
 // Function to add a track to favorites in local storage
 function addToFavorites(track) {
@@ -94,21 +114,3 @@ function addToFavorites(track) {
 }
 // Variable to keep track of the current search type (Music or Movies)
 let currentSearchType = '';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -24,7 +24,7 @@ Key Features:
 
 ## Screenshot
 
-[CLICK-HERE]()
+![CLICK-HERE](./assets/imgs/Screenshot%20(10).png)
 
 ## Link to the Deployed Application
 
