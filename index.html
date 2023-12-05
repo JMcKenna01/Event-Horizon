@@ -28,9 +28,9 @@
     <main>
         <section class="section">
             <div class="container has-text-centered">
-                <div class="column has-background-grey-light">
+                <div class="column">
                     <div id="center">
-                        <h2 class="is-size-4">Would you like to browse for music or movies?</h2>
+                        <h2 id="top" class="is-size-4 has-text-white has-background-grey-darker">Would you like to browse for Music or Movies?</h2>
                         <div>
                             <!-- Updated button IDs -->
                             <button id="musicButton" class="button is-size-4 mx-5 mt-5">Music</button>
@@ -38,11 +38,16 @@
                         </div>
                         <form>
                             <input id="input" class="input is-rounded mt-5 has-text-centered" type="text"
-                                placeholder="Enter movies or songs here">
-                            <button type="submit" class="is-size-5 mt-3">Submit</button>
+                                placeholder="Enter Music or Movies here">
+                            <button id="submit" type="submit" class="is-size-5 mt-3">Submit</button>
                         </form>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="bottom" class="section">
+            <div class="container has-text-centered">
+                <h2 id="bottomtext" class="is-size-2 has-text-white has-background-grey-darker">Beyond Entertainment: Discover, Explore, Experience</h2>
             </div>
         </section>
         <!-- Content will be loaded here -->
@@ -55,9 +60,6 @@
         </section>
         <script src="./assets/script.js"></script>
     </main>
-    <footer>
-        <!-- Footer content -->
-    </footer>
     
 </body>
 
