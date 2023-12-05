@@ -1,8 +1,10 @@
 // Function to handle Music button click
 document.getElementById('musicButton').addEventListener('click', function () {
+
     console.log("Music button clicked");
     currentSearchType = 'music';
     displayMusicSearchPrompt();
+
 });
 
 // Function to handle Movies button click
@@ -25,6 +27,7 @@ function displayMusicSearchPrompt() {
 }
 
 // Event listener for form submission
+
 document.querySelector('#userform').addEventListener('submit', function (e) {
     e.preventDefault();
     let searchTerm = document.getElementById('input').value;
@@ -62,6 +65,7 @@ function searchMusicWithShazam(query) {
         })
         .catch(error => console.error('Error:', error));
 }
+
 
 // Function to display music search results from Shazam
 function displayMusicResults(dataObj) {
@@ -108,3 +112,7 @@ function addToFavorites(track) {
 
 // Variable to keep track of the current search type (Music or Movies)
 let currentSearchType = '';
+=======
+
+
+
