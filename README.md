@@ -11,7 +11,7 @@ Key Features:
 - Intuitive and user-friendly interface, powered by Bulma.
 - Extensive database of movies and music, accessed via Rapid API.
 - Customizable search functionality for precise discovery.
-- Detailed information on movies and music, including cast, synopsis, artist bios, and track listings.
+- Detailed information on movies and music, including cast, artist bios, and track listings.
 - Responsive design for a consistent experience across various devices.
 
 ## Code Breakdown
