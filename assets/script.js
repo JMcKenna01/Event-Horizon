@@ -62,6 +62,7 @@ function displayMusicResults(dataObj) {
     resultsContainer.innerHTML = '';
     dataObj.tracks.hits.forEach(hit => {
         var resultCard = document.createElement('div');
+        resultCard.style.background = "rgb(113, 230, 191)";
         resultCard.classList.add('card', 'mb-3');
         var resultBody = document.createElement('div');
         resultBody.classList.add('card-content');
@@ -76,6 +77,7 @@ function displayMusicResults(dataObj) {
         resultBody.appendChild(subtitleEl);
         // Add to Favorites Button
         var addToFavoritesBtn = document.createElement('button');
+        addToFavoritesBtn.style.float = "right";
         addToFavoritesBtn.textContent = 'Add to Favorites';
         addToFavoritesBtn.onclick = function() { addToFavorites(hit.track); };
         resultBody.appendChild(addToFavoritesBtn);
