@@ -1,10 +1,10 @@
 // Function to handle Music button click
-document.getElementById('musicButton').addEventListener('click', function() {
+document.getElementById('musicButton').addEventListener('click', function () {
     loadContent('music');
 });
 
 // Function to handle Movies button click
-document.getElementById('moviesButton').addEventListener('click', function() {
+document.getElementById('moviesButton').addEventListener('click', function () {
     loadContent('movies');
 });
 
@@ -29,7 +29,7 @@ function addToFavorites(eventId) {
 }
 
 // Event listener for form submission
-document.querySelector('form').addEventListener('submit', function(e) {
+document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
     let searchTerm = document.getElementById('input').value;
     searchContent(searchTerm);
@@ -41,11 +41,13 @@ function searchContent(term) {
     fetch('/search?query=' + term)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             // Process and display the search results
             displaySearchResults(data);
         })
         .catch(error => console.error('Error:', error));
 }
+
 
 // Function to display search results
 function displaySearchResults(results) {
